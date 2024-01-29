@@ -125,9 +125,9 @@ def infer_params(state_dict):
 
 class UpscalerESRGAN(Upscaler):
     def __init__(self, dirname):
-        self.name = "nmkd-siax"
-        self.model_url = "https://huggingface.co/gemasai/4x_NMKD-Siax_200k/resolve/main/4x_NMKD-Siax_200k.pth"
-        self.model_name = "4x_NMKD-Siax_200k"
+        self.name = "foolhardy_Remacri"
+        self.model_url = "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
+        self.model_name = "4x_foolhardy_Remacri"
         self.scalers = []
         self.user_path = dirname
         super().__init__()

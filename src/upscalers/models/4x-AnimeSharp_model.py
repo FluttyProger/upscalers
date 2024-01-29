@@ -125,9 +125,9 @@ def infer_params(state_dict):
 
 class UpscalerESRGAN(Upscaler):
     def __init__(self, dirname):
-        self.name = "nmkd-siax"
-        self.model_url = "https://huggingface.co/gemasai/4x_NMKD-Siax_200k/resolve/main/4x_NMKD-Siax_200k.pth"
-        self.model_name = "4x_NMKD-Siax_200k"
+        self.name = "AnimeSharp"
+        self.model_url = "https://huggingface.co/konohashinobi4/4xAnimesharp/resolve/main/4x-AnimeSharp.pth"
+        self.model_name = "4x-AnimeSharp"
         self.scalers = []
         self.user_path = dirname
         super().__init__()
@@ -186,7 +186,7 @@ class UpscalerESRGAN(Upscaler):
 
         if "body.0.rdb1.conv1.weight" in state_dict and "conv_first.weight" in state_dict:
             print("\nbody.0.rdb1.conv1.weight\n")
-            nb = 6 if "RealESRGAN_x4plus_anime_6B" in filename else 23
+            nb = 6
             state_dict = resrgan2normal(state_dict, nb)
         elif "conv_first.weight" in state_dict:
             print("\nconv_first.weight\n")
