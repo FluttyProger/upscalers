@@ -31,9 +31,15 @@ cache_models_on_device = True
 # Upscaler config
 #
 
+grid_prevent_empty_spots = False
+
+n_rows = -1
 
 # When not using half-precision, can improve performance with less memory 
 upcast_sampling = False
+
+ESRGAN_tile = 192
+ESRGAN_tile_overlap = 8 # Low values = visible seam
 
 # Tile size for SWIN
 swin_tile_size = 192 
